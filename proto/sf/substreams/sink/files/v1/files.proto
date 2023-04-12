@@ -1,8 +1,0 @@
-syntax = "proto3";
-
-package sf.substreams.sink.files.v1;
-
-message Lines {
-    repeated string lines = 1;
-}
-
