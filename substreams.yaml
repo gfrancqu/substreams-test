@@ -1,13 +1,10 @@
 specVersion: v0.1.0
 package:
-  name: 'substreams_solana_quickstart'
+  name: "substreams_rain"
   version: v1.0.0
 
-protobuf:
-  files:
-    - block_meta.proto
-  importPaths:
-    - ./proto
+imports:
+  sink_files: https://github.com/streamingfast/substreams-sink-files/releases/download/v0.2.0/substreams-sink-files-v0.2.0.spkg
 
 binaries:
   default:
@@ -20,4 +17,4 @@ modules:
     inputs:
       - source: sf.solana.type.v1.Block
     output:
-      type: proto:sf.solana.block_meta.v1.BlockMeta
+      type: proto:sf.substreams.sink.files.v1.Lines
